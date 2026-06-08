@@ -622,8 +622,8 @@ try:
         WebsiteConfiguration={{'IndexDocument': {{'Suffix': 'index.html'}}}},
     )
 except Exception as e:
-    print(f'[WARN] put_bucket_website: {e}')
+    print('[WARN] put_bucket_website:', e)
 
 url = 'https://d12u2i9a3oakm0.cloudfront.net'
-print(f'[OK] Dashboard disponible en:\n     {url}')
-print(f'[DONE] {datetime.now(timezone.utc).isoformat()}')
+print('[OK] Dashboard disponible en:', url)
+print('[DONE]', datetime.now(timezone.utc).isoformat())
