@@ -315,7 +315,7 @@ html = f"""<!DOCTYPE html>
 
 </main>
 
-<footer>MAESTRÍA EN CIENCIA DE DATOS Y ANALÍTICA · UNIVERSIDAD EAFIT · PROYECTO INTEGRADOR II 2026</footer>
+<footer>Juan David Trujillo · Data Scientist · <a href="https://github.com/jdtrujillo1015" target="_blank" style="color:inherit;text-decoration:underline;">github.com/jdtrujillo1015</a> · Datos: XM S.A. E.S.P.</footer>
 
 <script>
 // ── Datos ────────────────────────────────────────────────────────────────────
