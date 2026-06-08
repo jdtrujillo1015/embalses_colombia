@@ -622,8 +622,8 @@ try:
         WebsiteConfiguration={{'IndexDocument': {{'Suffix': 'index.html'}}}},
     )
 except Exception as e:
-    print(f'[WARN] put_bucket_website: {{e}}')
+    print(f'[WARN] put_bucket_website: {e}')
 
-url = 'http://embalses-colombia-dashboard-025627370678.s3-website-us-east-1.amazonaws.com/index.html'
-print(f'[OK] Dashboard disponible en:\n     {{url}}')
-print(f'[DONE] {{datetime.now(timezone.utc).isoformat()}}')
+url = 'https://d12u2i9a3oakm0.cloudfront.net'
+print(f'[OK] Dashboard disponible en:\n     {url}')
+print(f'[DONE] {datetime.now(timezone.utc).isoformat()}')
