@@ -48,7 +48,7 @@ INPUT_DIR  = Path("/opt/ml/processing/input/model")
 OUTPUT_DIR = Path("/opt/ml/processing/output/preds")
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
-BUCKET          = "pi-2026"
+BUCKET          = "embalses-colombia"
 LATEST_PREFIX   = "predictions/lstm/latest"
 fecha_hoy       = datetime.now(timezone.utc).strftime("%Y-%m-%d")
 VERSIONS_PREFIX = f"predictions/lstm/versions/{fecha_hoy}"

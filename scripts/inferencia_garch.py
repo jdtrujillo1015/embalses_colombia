@@ -7,7 +7,7 @@ Inputs  (ProcessingInput):
     /opt/ml/processing/input/model/    ← models/garch/latest/
     /opt/ml/processing/input/curated/  ← data/curated/embalse_guatape/volumen_curated.parquet
         Local path consola: /opt/ml/processing/input/curated
-        S3 location consola: s3://pi-2026/data/curated/embalse_guatape/volumen_curated.parquet
+        S3 location consola: s3://embalses-colombia/data/curated/embalse_guatape/volumen_curated.parquet
 
 Outputs (ProcessingOutput):
     /opt/ml/processing/output/preds/   → predictions/garch/latest/
@@ -37,7 +37,7 @@ INPUT_CURATED = Path("/opt/ml/processing/input/curated")   # raíz limpia, sin s
 OUTPUT_DIR    = Path("/opt/ml/processing/output/preds")
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
-BUCKET          = "pi-2026"
+BUCKET          = "embalses-colombia"
 S3_CURATED      = f"s3://{BUCKET}/data/curated/embalse_guatape/volumen_curated.parquet"
 LATEST_PREFIX   = "predictions/garch/latest"
 fecha_hoy       = datetime.now(timezone.utc).strftime("%Y-%m-%d")
@@ -92,7 +92,7 @@ if parquet_files:
     print(f"  Leyendo desde: {parquet_files[0]}")
     df_c = pd.read_parquet(parquet_files[0])
 else:
-    # Fallback directo a S3 — siempre funciona con LabRole
+    # Fallback directo a S3 — siempre funciona con SageMakerExecutionRole
     print(f"  ⚠ Input vacío — leyendo desde S3: {S3_CURATED}")
     import s3fs
     fs = s3fs.S3FileSystem()

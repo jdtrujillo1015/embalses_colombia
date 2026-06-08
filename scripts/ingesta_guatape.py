@@ -22,7 +22,7 @@ import pydataxm.pydataxm as pxm
 print("[import] Todas las librerías OK")
 
 # ─── Configuración ────────────────────────────────────────────────────────────
-BUCKET         = "pi-2026"
+BUCKET         = "embalses-colombia"
 RAW_PREFIX     = "data/raw/embalse_guatape/"
 METADATA_KEY   = "data/raw/embalse_guatape/_metadata/ultima_descarga.txt"
 FECHA_INICIO   = "2015-01-01"

@@ -16,8 +16,8 @@ import s3fs
 import io
 
 # ─── Configuración ────────────────────────────────────────────────────────────
-BUCKET      = "pi-2026"
-RAW_PATH    = "pi-2026/data/raw/embalse_guatape/volumen_util_m3/"
+BUCKET      = "embalses-colombia"
+RAW_PATH    = "embalses-colombia/data/raw/embalse_guatape/volumen_util_m3/"
 CURATED_KEY = "data/curated/embalse_guatape/volumen_curated.parquet"
 
 s3 = boto3.client("s3")

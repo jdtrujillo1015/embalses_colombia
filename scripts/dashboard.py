@@ -18,8 +18,8 @@ from datetime import datetime, timezone
 import pyarrow.parquet as pq
 
 # ── Configuración ─────────────────────────────────────────────────────────────
-BUCKET           = 'pi-2026'
-DASHBOARD_BUCKET = 'pi-2026-dashboard-387623072987'
+BUCKET           = 'embalses-colombia'
+DASHBOARD_BUCKET = 'embalses-colombia-dashboard-025627370678'
 DASHBOARD_KEY    = 'index.html'
 
 s3 = boto3.client('s3')
@@ -624,6 +624,6 @@ try:
 except Exception as e:
     print(f'[WARN] put_bucket_website: {{e}}')
 
-url = 'http://pi-2026-dashboard-387623072987.s3-website-us-east-1.amazonaws.com/index.html'
+url = 'http://embalses-colombia-dashboard-025627370678.s3-website-us-east-1.amazonaws.com/index.html'
 print(f'[OK] Dashboard disponible en:\n     {{url}}')
 print(f'[DONE] {{datetime.now(timezone.utc).isoformat()}}')

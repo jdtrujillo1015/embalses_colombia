@@ -51,7 +51,7 @@ INPUT_DIR  = Path("/opt/ml/processing/input/curated")
 OUTPUT_DIR = Path("/opt/ml/processing/output/model")
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
-BUCKET          = "pi-2026"
+BUCKET          = "embalses-colombia"
 LATEST_PREFIX   = "models/holtwinters/latest"
 fecha_hoy       = datetime.now(timezone.utc).strftime("%Y-%m-%d")
 VERSIONS_PREFIX = f"models/holtwinters/versions/{fecha_hoy}"
